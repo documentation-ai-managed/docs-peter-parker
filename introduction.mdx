@@ -1,0 +1,116 @@
+---
+title: Introduction to Peter Parker
+description: Discover Peter Parker, your default documentation space for organizing and managing all project documentation efficiently.
+---
+
+## Overview
+
+Peter Parker provides a centralized hub for your project documentation. You create organized spaces, manage content collaboratively, and publish polished docs with ease. This platform streamlines workflows, ensuring your team stays aligned with up-to-date information.
+
+<Callout kind="info">
+Peter Parker supports MDX for rich, interactive documentation pages with components like Cards and Steps.
+</Callout>
+
+## Key Features
+
+Peter Parker offers powerful tools to enhance your documentation experience.
+
+<Columns cols={3}>
+  <Card title="Organized Spaces" icon="folder" href="#spaces">
+    Create unlimited documentation spaces for projects, teams, or products. Each space includes version history and search.
+  </Card>
+  <Card title="Collaborative Editing" icon="users" href="#collaboration">
+    Invite team members for real-time edits, comments, and approvals. Track changes with Git-like versioning.
+  </Card>
+  <Card title="Custom Publishing" icon="globe" href="#publishing">
+    Publish to custom domains or embed docs anywhere. Supports SEO, analytics, and theming.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Get up and running in minutes with these steps.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://peterparker.dev` using your email or GitHub account.
+  </Step>
+  <Step title="New Space" icon="plus">
+    Click **New Space** and name it for your project, like "MyApp Docs".
+  </Step>
+  <Step title="Add Content" icon="edit-3">
+    Create your first page with the MDX editor. Use components for interactive content.
+  </Step>
+  <Step title="Publish" icon="upload-cloud">
+    Preview and publish. Share the live URL with your team.
+  </Step>
+</Steps>
+
+## Navigation Guide
+
+Explore Peter Parker using these common paths.
+
+<Tabs>
+  <Tab title="Sidebar" icon="menu">
+    Use the left sidebar for spaces, pages, and settings. Pin favorites for quick access.
+
+    ```
+    - Home
+    - Spaces
+      - MyApp Docs
+      - API Reference
+    - Search
+    ```
+  </Tab>
+  <Tab title="Search" icon="search">
+    Press `<kbd>Ctrl</kbd>+<kbd>K</kbd>` or click the magnifying glass to search across all spaces.
+  </Tab>
+  <Tab title="Settings" icon="settings">
+    Access global settings via your profile icon: themes, integrations, and billing.
+  </Tab>
+</Tabs>
+
+## Embed Peter Parker Docs
+
+Integrate docs into your app with a simple script.
+
+<CodeGroup tabs="JavaScript,React">
+  ```javascript
+  // Add to your HTML head
+  const script = document.createElement('script');
+  script.src = 'https://peterparker.dev/embed.js?space=myapp-docs';
+  script.async = true;
+  document.head.appendChild(script);
+  ```
+  ```jsx
+  // React component
+  import { PeterParkerEmbed } from '@peterparker/embed';
+
+  function DocsEmbed() {
+    return (
+      <PeterParkerEmbed spaceId="myapp-docs" height="600px" />
+    );
+  }
+  ```
+</CodeGroup>
+
+## Why Choose Peter Parker
+
+<Expandable title="Advanced Benefits" default-open="true">
+Peter Parker scales with your needs. Handle thousands of pages without performance issues. Integrates with GitHub, Slack, and Zapier for automated workflows.
+
+Enjoy unlimited collaborators, custom CSS themes, and analytics to track doc usage.
+</Expandable>
+
+<Callout kind="tip">
+Ready to dive deeper? Check [Quickstart](/quickstart) for integrations or [Authentication](/authentication) for secure access.
+</Callout>
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="zap" href="/quickstart">
+    Set up your first space and publish in under 5 minutes.
+  </Card>
+  <Card title="API Reference" icon="code" href="/api">
+    Automate documentation with our REST API.
+  </Card>
+</Columns>

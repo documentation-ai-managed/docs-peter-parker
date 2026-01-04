@@ -1,0 +1,109 @@
+---
+title: Core Features of Peter Parker
+description: Explore the essential tools and capabilities for managing project documentation effectively.
+---
+
+## Overview
+
+Peter Parker provides powerful tools to streamline your project documentation. You organize content hierarchically, collaborate seamlessly with teams, track changes with version history, and find information quickly using advanced search. These features help you maintain clear, up-to-date docs without complexity.
+
+<Columns cols={2}>
+  <Card title="Organize Easily" icon="folder" href="#organization">
+    Build nested hierarchies for structured knowledge bases.
+  </Card>
+  <Card title="Collaborate Live" icon="users" href="#collaboration">
+    Edit together in real-time with granular permissions.
+  </Card>
+  <Card title="Track Versions" icon="git-branch" href="#versions">
+    View and revert changes with full history.
+  </Card>
+  <Card title="Search Smart" icon="search" href="#search">
+    Filter results by tags, dates, and authors.
+  </Card>
+</Columns>
+
+## Document Organization and Hierarchy
+
+Create a clear structure for your docs using folders and pages. You nest pages indefinitely to match your project's architecture, like `/api/reference/endpoints` or `/guides/user-setup`.
+
+Use the drag-and-drop interface to reorder content. Each page supports rich MDX formatting, including components like `<Callout>` for notes.
+
+| Level | Example Path | Use Case |
+|-------|--------------|----------|
+| Root | `/introduction` | Landing page |
+| Folder | `/api` | API section |
+| Page | `/api/auth` | Authentication guide |
+| Nested | `/api/auth/oauth` | OAuth details |
+
+<Callout kind="tip">
+  Prefix page slugs with numbers like `01-introduction.mdx` for automatic sorting.
+</Callout>
+
+## Collaboration and Editing Workflows
+
+Invite team members and assign roles: viewer, editor, or admin. You enable real-time editing where changes sync instantly.
+
+<Steps>
+  <Step title="Invite Collaborators" icon="user-plus">
+    Go to workspace settings and add emails.
+  </Step>
+  <Step title="Set Permissions" icon="shield">
+    Choose roles per folder or page.
+  </Step>
+  <Step title="Review Changes" icon="eye">
+    Use inline comments and suggestions.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Editor View" icon="edit-3">
+    Live cursor positions show who edits what.
+  </Tab>
+  <Tab title="Reviewer View" icon="check-circle">
+    Approve changes before publishing.
+  </Tab>
+</Tabs>
+
+## Version History and Tracking
+
+Every edit creates a snapshot. You view diffs, restore previous versions, or compare branches.
+
+<Expandable title="Advanced Version Controls" default-open="false">
+  Access history via the page menu. Filter by date or author.
+
+  ```javascript
+  // API to fetch versions
+  const versions = await fetch('https://api.example.com/docs/{pageId}/versions');
+  console.log(versions); // Array of snapshots
+  ```
+</Expandable>
+
+<CodeGroup tabs="CLI,API">
+  ```bash
+  peter versions list --page introduction.mdx
+  peter versions revert --id abc123
+  ```
+  ```javascript
+  // Restore via API
+  await fetch('https://api.example.com/docs/{pageId}/revert', {
+    method: 'POST',
+    body: JSON.stringify({ versionId: 'abc123' })
+  });
+  ```
+</CodeGroup>
+
+## Search Functionality and Filters
+
+Peter Parker's search indexes all content instantly. You type queries and refine with filters.
+
+Key filters:
+
+- **By tag**: `tag:api`
+- **By date**: `after:2024-01-01`
+- **By author**: `author:john@example.com`
+
+<Callout kind="info">
+  Use quotes for phrases: `"real-time collaboration"`.
+</Callout>
+
+Combine features for efficiency. Organize docs hierarchically, collaborate live, track history, and search precisely to keep your project documentation effective and current.

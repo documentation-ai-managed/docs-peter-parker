@@ -1,0 +1,132 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Peter Parker.
+---
+
+## Recent Updates
+
+Stay informed about new features, bug fixes, and improvements. Peter Parker releases updates regularly to enhance your documentation experience.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added real-time collaboration for teams, allowing multiple users to edit docs simultaneously.
+- Introduced custom themes with your brand color `#3B82F6` support for personalized spaces.
+- New search filters let you find docs by tags, authors, or update date.
+
+## Bug Fixes
+
+- Fixed rendering issues with nested code blocks in MDX files.
+- Resolved authentication errors during session timeouts.
+- Improved mobile responsiveness for table views.
+
+## Improvements
+
+- Faster page loads by 40% with optimized asset caching.
+- Better keyboard navigation in the editor.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Integrated version history with diff views to track changes over time.
+- Embed videos and iframes directly in your docs for richer content.
+
+## Improvements
+
+- Enhanced export options including PDF and Markdown bundles.
+- Updated UI components for a more intuitive navigation sidebar.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## Initial Release
+
+- Core documentation editor with MDX support and live preview.
+- Project organization with folders, tags, and permissions.
+- Basic authentication via email or OAuth.
+
+## Breaking Changes
+
+- Updated API endpoints from `/v0/` to `/v1/` prefix.
+
+</Update>
+
+## How to Upgrade
+
+You upgrade Peter Parker by pulling the latest version. Follow these steps to ensure a smooth update.
+
+<Steps>
+  <Step title="Check Current Version" icon="package">
+    Run the version check command to see your installed version.
+
+````bash
+peterparker --version
+````
+  </Step>
+  <Step title="Backup Your Data" icon="database">
+    Export your docs before upgrading.
+
+    <CodeGroup tabs="CLI,UI">
+````bash
+peterparker export --all > backup.json
+````
+````json
+// Use dashboard export at https://dashboard.example.com/export
+{
+  "docs": [...]
+}
+````
+    </CodeGroup>
+  </Step>
+  <Step title="Install Update" icon="download">
+    Update via your package manager.
+
+    <Tabs>
+      <Tab title="npm" icon="package">
+````bash
+npm update peterparker
+````
+      </Tab>
+      <Tab title="Docker" icon="docker">
+````bash
+docker pull peterparker:latest
+docker run -p 3000:3000 peterparker:latest
+````
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step title="Verify" icon="check-circle">
+    Restart and test key features like editing and search.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+Subscribe to the changelog RSS feed at `/changelog.xml` or join the Discord for instant notifications on new releases.
+</Callout>
+
+## Upcoming Changes
+
+Watch for these enhancements in future releases:
+
+<Columns cols={2}>
+  <Card title="AI Assistant" icon="bot" href="#ai-assistant">
+    Auto-generate doc outlines and summaries.
+  </Card>
+  <Card title="Advanced Analytics" icon="bar-chart-3" href="#analytics">
+    Track doc views and engagement metrics.
+  </Card>
+  <Card title="Git Sync" icon="git-branch" href="#git-sync">
+    Two-way sync with GitHub repos (horizontal).
+    <br/>
+    <br/>
+  </Card>
+</Columns>
+
+<Expandable title="How to Provide Feedback" default-open="true">
+Share your thoughts via the feedback form at `https://dashboard.example.com/feedback` or open issues on GitHub.
+</Expandable>
